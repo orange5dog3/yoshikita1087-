@@ -1,0 +1,207 @@
+// サイト内の共通設定------------------------------------
+
+html {
+    //375px~767px
+    font-size: 62.5%;
+    //768~1399px
+    @media(min-width: 768px) and (max-width: 1399px){
+      font-size: calc(10 / 1400 * 100vw);
+    }
+    //1400px~
+    @media (min-width: 1400px) {
+      font-size: 10px;
+    }
+    @media(max-width:375px) {
+      font-size: calc(10 /375 * 100vw);
+    }
+}
+
+body{
+    font-weight: 700;
+    color: $color-text;
+    font-family: $font-family-base;
+}
+
+h1,h2,h3,h4,label,input,a,ul,li {
+    display: block;
+}
+
+.header-padding{
+    padding-top: 8rem;
+    @include sp {
+        padding-top: 5rem;
+    }
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.inner {
+    max-width: 140rem;
+    padding-inline: 3rem;
+    margin: 0 auto;
+    @include sp {
+        padding-inline: 1rem;
+    }
+}
+
+@include pc{
+    .pc_none{
+        display: none;
+    }
+    .sp_none{
+        display: block;
+    }
+}
+
+
+@include sp{
+    .sp_none{
+        display: none;
+    }
+    .pc_none{
+        display: block;
+    }
+}
+
+//サイズ用関数------------------------------------
+//$pixelsVw:サイズ
+//$baseWidth:ベースとなる画面横幅
+
+@function vw($pixelsVw, $baseWidth) {
+    @return calc($pixelsVw / $baseWidth * 100vw);
+  }
+
+// 基本的なaタグの設定------------------------------------
+a {
+    text-decoration: none;
+    @include transition;
+}
+
+// お問い合わせボタン------------------------------------
+#container {
+    position: relative;
+}
+
+.top__contact {
+    margin-top: 2.8rem;
+    text-align: right;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    @include sp {
+        text-align: center;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        white-space: nowrap;
+    }
+
+    // footerに到達した時のスタイル
+    &.footer-reached {
+        position: absolute;
+        bottom: auto;
+    }
+}
+
+.btn-contact {
+    @include text-style(2rem, calc(33/20));
+    letter-spacing: 0.2em;
+    padding: 1.6rem 7.6rem 1.2rem;
+    display: inline-block;
+    @include sp {
+        padding: 1.3rem 9.6rem 0.8rem;
+    }
+    &:hover {
+        @include hover-reversecolor;
+        border: 0.1rem solid $color-main;
+        border-bottom: none;
+    }
+}
+
+// 上部に戻るボタン------------------------------------
+.upper-arrow {
+    display: none;
+    position: fixed;
+    width: 6.8rem;
+    height: 6.8rem;
+    z-index: 999;
+
+    
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        cursor: pointer;
+        
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+
+    img {
+        position: absolute;
+        width: 2.3rem;
+        height: 1.6rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+// Slickスライダーの矢印------------------------------------
+.voice-slider {
+    position: relative;
+    
+    .slick-list {
+        margin: 0 -1.75rem; // gap: 3.5remの半分をnegative margin
+        overflow: hidden;
+    }
+    
+    .slick-slide {
+        padding: 0 1.75rem; // gap: 3.5remの半分をpadding
+    }
+
+}
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 43%;
+    transform: translateY(-50%);
+    z-index: 999;
+    cursor: pointer;
+    @include transition;
+
+    @include sp {
+        top: 41%;
+    }
+    &:hover {
+        @include transition;
+        cursor: pointer;
+        transform: translateY(-50%) scale(1.3);
+    }
+}
+
+.slick-prev {
+    left: -5.5rem;
+
+    @include sp {
+        left: 0.5rem;
+    }
+}
+
+.slick-next {
+    right: -5.5rem;
+
+    
+    @include sp {
+        right: 0.5rem;
+    }
+}
