@@ -1,0 +1,57 @@
+// ==========================================================================
+// Variables - フォント・カラー・サイズなどの定義
+// ==========================================================================
+
+// フォント
+// -------------------------
+
+// フォントファミリー
+$font-family-base: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+
+// フォントサイズ
+@mixin text-style($size, $lineHeight) {
+    font-size: $size;
+    line-height: $lineHeight;
+}
+
+// カラーパレット
+// -------------------------
+$color-accent: #215849;     // アクセントカラー
+$color-text: #000000;           // 通常テキスト
+$color-white: #ffffff;          // 白
+$color-black: #000000;          // 黒色
+
+
+// メディアクエリ
+// -------------------------
+@mixin sp {
+    @media screen and (max-width: 767px) {
+      @content;
+    }
+}
+
+@mixin pc {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+
+// トランジション
+// -------------------------
+@mixin transition {
+    transition: 0.3s ease;
+}
+
+@mixin hover-opacity {
+    opacity: 0.5;
+}
+
+@mixin hover-reversecolor {
+    color: $color-main;
+    background-color: $color-white;
+}
+
+@mixin hover-bigger {
+    transform: scale(1.1);
+}
