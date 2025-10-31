@@ -1,0 +1,120 @@
+// ハンバーガーメニュー（Component）
+// 再利用可能な見た目の定義のみを置く。レイアウト依存の調整は layout 側へ。
+
+.hamburger {
+    position: fixed;
+    top: 2.4rem;
+    right: 0;
+    width: 4rem;
+    height: 1.6rem;
+    cursor: pointer;
+
+    /* active状態 */
+    &.active {
+        .hamburger-line {
+            background: transparent;
+
+            &::before {
+                top: 0;
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                top: 0;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+
+/* 三本線 */
+.hamburger-line,
+.hamburger-line::before,
+.hamburger-line::after {
+    position: absolute;
+    left: 0;
+    top: 2.3rem;
+    width: 3rem;
+    height: 0.1rem;
+    background: $color-black;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.hamburger-line {
+    &::before,
+    &::after {
+        content: "";
+        left: 0;
+    }
+
+    &::before {
+        top: -0.8rem;
+    }
+
+    &::after {
+        top: 0.8rem;
+    }
+}
+
+
+// ハンバーガーメニュー
+.hamburger-menu {
+    position: fixed;
+    top: 5rem;
+    right: 0;
+    width: 30rem;
+    background: $color-accent;
+    transition: transform 0.3s ease;
+    z-index: 999;
+    transform: translateX(100%);
+    
+    &.active {
+        transform: translateX(0);
+    }
+    
+    nav {
+        width: 100%;
+        ul {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            margin: 0;
+        
+            li {
+                a {
+                    display: block;
+                    padding: 1.5rem 0 1rem 2rem;
+                    @include text-style(1.8rem, calc(33/18));
+                    text-decoration: none;
+                    color: $color-white;
+                    @include transition;
+                    
+                    &:hover {
+                        background-color: $color-black;
+                    }
+                }
+            }
+        }
+    }
+}
+    
+/* ハンバーガー背景 */
+.hamburger-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 998;
+    pointer-events: none;
+
+    &.active {
+        pointer-events: auto;
+    }
+}
+    

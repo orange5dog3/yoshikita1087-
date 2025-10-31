@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! destyle.css v4.0.1 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -398,7 +399,7 @@ html {
 body {
   font-weight: 700;
   color: #000000;
-  font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-family: "Inter", "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
 }
 
 h1, h2, h3, h4, label, input, a, ul, li {
@@ -452,132 +453,163 @@ a {
   transition: 0.3s ease;
 }
 
-#container {
-  position: relative;
-}
-
-.top__contact {
-  margin-top: 2.8rem;
-  text-align: right;
+.header {
   position: fixed;
-  bottom: 0;
-  right: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 999;
-}
-@media screen and (max-width: 767px) {
-  .top__contact {
-    text-align: center;
-    left: 50%;
-    right: auto;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    white-space: nowrap;
-  }
-}
-.top__contact.footer-reached {
-  position: absolute;
-  bottom: auto;
-}
-
-.btn-contact {
-  font-size: 2rem;
-  line-height: 1.65;
-  letter-spacing: 0.2em;
-  padding: 1.6rem 7.6rem 1.2rem;
-  display: inline-block;
-}
-@media screen and (max-width: 767px) {
-  .btn-contact {
-    padding: 1.3rem 9.6rem 0.8rem;
-  }
-}
-.btn-contact:hover {
-  color: #215849;
   background-color: #ffffff;
-  border: 0.1rem solid #215849;
-  border-bottom: none;
 }
 
-.upper-arrow {
-  display: none;
-  position: fixed;
-  width: 6.8rem;
-  height: 6.8rem;
-  z-index: 999;
+.header-content {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  height: 8rem;
 }
-.upper-arrow a {
+@media screen and (min-width: 768px) {
+  .header-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.header__logo a {
+  width: 7.5rem;
+}
+
+.top__fv {
+  width: 100%;
+  aspect-ratio: 390/120;
+}
+
+.hamburger {
+  position: fixed;
+  top: 2.4rem;
+  right: 0;
+  width: 4rem;
+  height: 1.6rem;
+  cursor: pointer;
+  /* active状態 */
+}
+.hamburger.active .hamburger-line {
+  background: transparent;
+}
+.hamburger.active .hamburger-line::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.hamburger.active .hamburger-line::after {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+/* 三本線 */
+.hamburger-line,
+.hamburger-line::before,
+.hamburger-line::after {
+  position: absolute;
+  left: 0;
+  top: 2.3rem;
+  width: 3rem;
+  height: 0.1rem;
+  background: #000000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.hamburger-line::before, .hamburger-line::after {
+  content: "";
+  left: 0;
+}
+.hamburger-line::before {
+  top: -0.8rem;
+}
+.hamburger-line::after {
+  top: 0.8rem;
+}
+
+.hamburger-menu {
+  position: fixed;
+  top: 5rem;
+  right: 0;
+  width: 30rem;
+  background: #215849;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  z-index: 999;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+.hamburger-menu.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.hamburger-menu nav {
+  width: 100%;
+}
+.hamburger-menu nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+  margin: 0;
+}
+.hamburger-menu nav ul li a {
   display: block;
+  padding: 1.5rem 0 1rem 2rem;
+  font-size: 1.8rem;
+  line-height: 1.8333333333;
+  text-decoration: none;
+  color: #ffffff;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.hamburger-menu nav ul li a:hover {
+  background-color: #000000;
+}
+
+/* ハンバーガー背景 */
+.hamburger-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 998;
+  pointer-events: none;
 }
-.upper-arrow a:hover {
-  opacity: 0.7;
-}
-.upper-arrow img {
-  position: absolute;
-  width: 2.3rem;
-  height: 1.6rem;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+.hamburger-bg.active {
+  pointer-events: auto;
 }
 
-.voice-slider {
-  position: relative;
-}
-.voice-slider .slick-list {
-  margin: 0 -1.75rem;
-  overflow: hidden;
-}
-.voice-slider .slick-slide {
-  padding: 0 1.75rem;
+.ff-zenkaku {
+  font-family: "Zen Kaku Gothic Antique", "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
 }
 
-.slick-prev,
-.slick-next {
-  position: absolute;
-  top: 43%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  z-index: 999;
-  cursor: pointer;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-}
-@media screen and (max-width: 767px) {
-  .slick-prev,
-  .slick-next {
-    top: 41%;
-  }
-}
-.slick-prev:hover,
-.slick-next:hover {
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-  cursor: pointer;
-  -webkit-transform: translateY(-50%) scale(1.3);
-          transform: translateY(-50%) scale(1.3);
+.ff-inter {
+  font-family: "Inter", "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
 }
 
-.slick-prev {
-  left: -5.5rem;
-}
-@media screen and (max-width: 767px) {
-  .slick-prev {
-    left: 0.5rem;
-  }
-}
-
-.slick-next {
-  right: -5.5rem;
-}
-@media screen and (max-width: 767px) {
-  .slick-next {
-    right: 0.5rem;
-  }
+.ff-zenmaru {
+  font-family: "Zen Maru Gothic", "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
 }/*# sourceMappingURL=style.css.map */

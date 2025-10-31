@@ -5,8 +5,15 @@
 // フォント
 // -------------------------
 
-// フォントファミリー
-$font-family-base: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+// 基本文字（JP中心）
+$ff-zenkaku: "Zen Kaku Gothic Antique", "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+// 見出し・リンク（英字はInter、JPはNotoにフォールバック）
+$ff-inter: "Inter", "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+// アルファベットセクションタイトル（丸ゴ）
+$ff-zenmaru: "Zen Maru Gothic", "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+
+// 既定の本文フォント（基本は Inter。zenkaku/zenmaru を使う場合は .ff-zenkaku や .ff-zenmaru を個別に指定）
+$font-family-base: "Inter", "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
 
 // フォントサイズ
 @mixin text-style($size, $lineHeight) {
