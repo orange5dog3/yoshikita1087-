@@ -28,14 +28,21 @@ h1,h2,h3,h4,label,input,a,ul,li {
 
 .header-padding{
     padding-top: 8rem;
-    @include sp {
-        padding-top: 5rem;
+    @include pc {
+        // padding-top: 5rem;
     }
 }
 
 img {
     width: 100%;
     display: block;
+}
+
+p {
+    font-size: 1.2rem;
+    @include pc {
+        font-size: 3rem;
+    }
 }
 
 .inner {
@@ -78,4 +85,12 @@ img {
 a {
     text-decoration: none;
     @include transition;
+}
+
+// フォントサイズ
+.fs-large {
+    font-size: 1.5rem !important;
+    @include pc {
+        font-size: 4.5rem;
+    }
 }

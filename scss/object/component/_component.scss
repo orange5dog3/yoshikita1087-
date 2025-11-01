@@ -3,3 +3,36 @@
 // 下層ページの見出し部分やパンくずリスト
 // 一覧ページのページネーション
 // サイト内で2回以上使うパーツが該当
+
+.c-green-btn {
+    display: block;
+    width: 29rem;
+    height: 5.5rem;
+    background-color: $color-accent;
+    border: 1px solid $color-accent;
+    color: $color-white;
+    text-align: center;
+
+    @include transition;
+    &:hover {
+        background-color: $color-white;
+        color: $color-accent;
+    }
+}
+
+.c-flex-arrow {
+    display:inline-flex; 
+    align-items:center; 
+    justify-content:center;
+    gap: 1rem;
+    font-weight: 400;
+}
+
+.c-btn-arrow:hover{ filter:brightness(1.05); }
+.c-btn-arrow-arrow{
+    width:15px; height:15px;
+    transition:transform .2s ease;
+}
+.c-btn-arrow:hover .c-btn-arrow-arrow{
+    transform:translateX(4px); /* 右に4px動かす */
+}

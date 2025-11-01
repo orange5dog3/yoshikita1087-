@@ -409,15 +409,18 @@ h1, h2, h3, h4, label, input, a, ul, li {
 .header-padding {
   padding-top: 8rem;
 }
-@media screen and (max-width: 767px) {
-  .header-padding {
-    padding-top: 5rem;
-  }
-}
-
 img {
   width: 100%;
   display: block;
+}
+
+p {
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 3rem;
+  }
 }
 
 .inner {
@@ -453,6 +456,15 @@ a {
   transition: 0.3s ease;
 }
 
+.fs-large {
+  font-size: 1.5rem !important;
+}
+@media screen and (min-width: 768px) {
+  .fs-large {
+    font-size: 4.5rem;
+  }
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -485,9 +497,53 @@ a {
   width: 7.5rem;
 }
 
-.top__fv {
-  width: 100%;
-  aspect-ratio: 390/120;
+.c-green-btn {
+  display: block;
+  width: 29rem;
+  height: 5.5rem;
+  background-color: #215849;
+  border: 1px solid #215849;
+  color: #ffffff;
+  text-align: center;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.c-green-btn:hover {
+  background-color: #ffffff;
+  color: #215849;
+}
+
+.c-flex-arrow {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  font-weight: 400;
+}
+
+.c-btn-arrow:hover {
+  -webkit-filter: brightness(1.05);
+          filter: brightness(1.05);
+}
+
+.c-btn-arrow-arrow {
+  width: 15px;
+  height: 15px;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+.c-btn-arrow:hover .c-btn-arrow-arrow {
+  -webkit-transform: translateX(4px);
+          transform: translateX(4px); /* 右に4px動かす */
 }
 
 .hamburger {
@@ -612,4 +668,89 @@ a {
 
 .ff-zenmaru {
   font-family: "Zen Maru Gothic", "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+.top__fv {
+  width: 100%;
+  aspect-ratio: 390/211;
+}
+
+.top__concept {
+  text-align: center;
+  padding-top: 3.2rem;
+  padding-bottom: 4.8rem;
+}
+.top__concept h1 {
+  font-size: 1.8rem;
+  color: #215849;
+  margin-bottom: 1.8rem;
+}
+
+.top__concept__grid {
+  width: 29.2rem;
+  margin: 4.3rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.top__concept__grid__item {
+  width: 14.1rem;
+  height: 14.1rem;
+  border: 1px solid #215849;
+}
+.top__concept__grid__item p {
+  margin-top: 2.2rem;
+}
+
+.top__concept__grid-item1 .top__concept__grid__image {
+  width: 8.7rem;
+  margin-top: 0.4rem;
+}
+
+.top__concept__grid-item2 .top__concept__grid__image {
+  width: 9.1rem;
+  margin-top: 0.4rem;
+}
+
+.top__concept__grid-item3 .top__concept__grid__image {
+  width: 7.6rem;
+  margin-top: 1.2rem;
+}
+
+.top__concept__grid-item4 p {
+  margin-top: 1.3rem;
+}
+.top__concept__grid-item4 .top__concept__grid__image {
+  width: 7.3rem;
+  margin-top: 1.2rem;
+}
+
+.top__concept__grid__image {
+  aspect-ratio: 1/1;
+  margin: 0 auto;
+}
+
+.top__concept__p1 {
+  margin-top: 2.6rem;
+}
+
+.top__concept__flex {
+  margin-top: 2.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3.2rem;
+}
+
+.top__concept__flex__image {
+  width: 6.2rem;
+  aspect-ratio: 62/77;
+}
+
+.top__concept__btn {
+  margin-top: 4.6rem;
 }/*# sourceMappingURL=style.css.map */
