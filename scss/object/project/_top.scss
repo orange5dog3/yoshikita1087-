@@ -1,7 +1,11 @@
 // fv
 .top__fv {
     width: 100%;
-    aspect-ratio: 390/211
+    aspect-ratio: 390/211;
+    @include pc {
+        aspect-ratio: 1440/835;
+        object-fit: cover;
+    }
 }
 
 // concept
@@ -9,14 +13,52 @@
     text-align: center;
     padding-top: 3.2rem;
     padding-bottom: 4.8rem;
+    position: relative;
+    @include pc {
+        padding-top: 8.2rem;
+        padding-bottom: 6.7rem;
+    }
     h1 {
         font-size: 1.8rem;
         color: $color-accent;
         margin-bottom: 1.8rem;
+        @include pc {
+            font-size: 6rem;
+            margin-bottom: 4.8rem;
+        }
     }
-
-    
 }
+
+.top__concept__logo1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(45deg); 
+    // width: 4.8rem;
+    aspect-ratio: 48/75;
+    width: vw(155, 1440);
+
+    @include pc {
+        top: -2rem;
+        width: 15.5rem;
+    }
+ 
+}
+
+.top__concept__logo2 {
+    position: absolute;
+    top: 3.3rem;
+    right: 0;
+    width: 4.9rem;
+    aspect-ratio: 49/77;
+    width: vw(274, 1440);
+    @include pc {
+        top: 1rem;
+        width: 27.4rem;
+    }
+ 
+}
+
 
 .top__concept__grid {
     width: 29.2rem;
@@ -24,73 +66,99 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    @include pc {
+        width: 100%;
+        margin-top: 10.5rem;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8rem;
+    }
 }
 
 .top__concept__grid__item {
     width: 14.1rem;
     height: 14.1rem;
     border: 1px solid $color-accent;
-
+    @include pc {
+        width: 27.5rem;
+        height: 27.5rem;
+    }
     p {
-        margin-top: 2.2rem;
+        @include pc {
+            font-size: 2.8rem;
+        }
     }
     
 }
 
-.top__concept__grid-item1 {
-    .top__concept__grid__image {
-        width: 8.7rem;
-        margin-top: 0.4rem;
-    }
-}
-
-.top__concept__grid-item2 {
-    .top__concept__grid__image {
-        width: 9.1rem;
-        margin-top: 0.4rem;
-    }
-}
-
+.top__concept__grid-item1,
+.top__concept__grid-item2,
 .top__concept__grid-item3 {
+    p {
+        margin-top: 2.2rem;
+        @include pc {
+            margin-top: 4.9rem;
+        }
+    }
+  
     .top__concept__grid__image {
-        width: 7.6rem;
-        margin-top: 1.2rem;
+        margin-top: 1.3rem;
     }
 }
+
+
 
 .top__concept__grid-item4 {
     p {
         margin-top: 1.3rem;
+        @include pc {
+            margin-top: 3.4rem;
+        }
     }
 
     .top__concept__grid__image {
-        width: 7.3rem;
-        margin-top: 1.2rem;
+        margin-top: 1rem;
+        @include pc {
+            margin-top: 0;
+        }
     }
 }
 
 .top__concept__grid__image {
+    width: 7.8rem;
     aspect-ratio: 1/1;
     margin: 0 auto;
+    @include pc {
+        width: 14.9rem;
+    }
 }
 
 
 .top__concept__p1{
     margin-top: 2.6rem;
+    @include pc {
+        margin-top: 9rem;
+    }
 }
 
 .top__concept__flex {
     margin-top: 2.3rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 3.2rem;
 }
 
 .top__concept__flex__image {
     width: 6.2rem;
     aspect-ratio: 62/77;
+    @include pc {
+        width: 20rem;
+    }
 }
 
 .top__concept__btn {
     margin-top: 4.6rem;
+    @include pc {
+        margin-top: 0rem;
+    }
 }

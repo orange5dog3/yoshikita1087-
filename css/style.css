@@ -397,7 +397,7 @@ html {
 }
 
 body {
-  font-weight: 700;
+  font-weight: 400;
   color: #000000;
   font-family: "Inter", "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
 }
@@ -409,6 +409,12 @@ h1, h2, h3, h4, label, input, a, ul, li {
 .header-padding {
   padding-top: 8rem;
 }
+@media screen and (min-width: 768px) {
+  .header-padding {
+    padding-top: 15.6rem;
+  }
+}
+
 img {
   width: 100%;
   display: block;
@@ -424,13 +430,13 @@ p {
 }
 
 .inner {
-  max-width: 140rem;
-  padding-inline: 3rem;
+  padding-inline: 1rem;
   margin: 0 auto;
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .inner {
-    padding-inline: 1rem;
+    padding-inline: 3rem;
+    max-width: 140rem;
   }
 }
 
@@ -456,12 +462,24 @@ a {
   transition: 0.3s ease;
 }
 
+@media screen and (min-width: 768px) {
+  .fs-very-small {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .fs-small {
+    font-size: 2rem !important;
+  }
+}
+
 .fs-large {
   font-size: 1.5rem !important;
 }
 @media screen and (min-width: 768px) {
   .fs-large {
-    font-size: 4.5rem;
+    font-size: 4.5rem !important;
   }
 }
 
@@ -481,6 +499,10 @@ a {
 }
 @media screen and (min-width: 768px) {
   .header-content {
+    padding-top: 3.5rem;
+    padding-left: 3.9rem;
+    padding-right: 3.3rem;
+    height: 15.6rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -496,6 +518,28 @@ a {
 .header__logo a {
   width: 7.5rem;
 }
+@media screen and (min-width: 768px) {
+  .header__logo a {
+    width: 11.2rem;
+  }
+}
+
+.header__nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 9rem;
+}
+
+.header__nav ul li {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+.header__nav ul li span {
+  font-size: 2rem;
+  color: #215849;
+}
 
 .c-green-btn {
   display: block;
@@ -507,6 +551,20 @@ a {
   text-align: center;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+}
+@media screen and (min-width: 768px) {
+  .c-green-btn {
+    width: 53.5rem;
+    height: 10rem;
+  }
+}
+.c-green-btn p {
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .c-green-btn p {
+    font-size: 3rem;
+  }
 }
 .c-green-btn:hover {
   background-color: #ffffff;
@@ -539,6 +597,12 @@ a {
   transition: -webkit-transform 0.2s ease;
   transition: transform 0.2s ease;
   transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+@media screen and (min-width: 768px) {
+  .c-btn-arrow-arrow {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 .c-btn-arrow:hover .c-btn-arrow-arrow {
@@ -670,20 +734,152 @@ a {
   font-family: "Zen Maru Gothic", "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
 }
 
+@-webkit-keyframes infinity-scroll-left {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes infinity-scroll-left {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+.scroll-infinity__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.scroll-infinity__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-animation: infinity-scroll-left 80s linear infinite;
+          animation: infinity-scroll-left 80s linear infinite;
+  will-change: transform;
+  gap: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .scroll-infinity__list {
+    gap: 3.8rem;
+  }
+}
+
+.scroll-infinity__item {
+  width: 15.7rem;
+  aspect-ratio: 157/105;
+  margin-right: 0rem;
+}
+@media screen and (min-width: 768px) {
+  .scroll-infinity__item {
+    width: 43.9rem;
+  }
+}
+
+.scroll-infinity__item:last-child {
+  margin-right: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  .scroll-infinity__item:last-child {
+    margin-right: 3.8rem;
+  }
+}
+
+.scroll-infinity__item > img {
+  display: block;
+  width: 100%;
+}
+
+/* 念のため：img/LIへの余計なanimation/transformを無効化 */
+.scroll-infinity__item, .scroll-infinity__item img {
+  -webkit-animation: none;
+          animation: none;
+  -webkit-transform: none;
+          transform: none;
+}
+
 .top__fv {
   width: 100%;
   aspect-ratio: 390/211;
+}
+@media screen and (min-width: 768px) {
+  .top__fv {
+    aspect-ratio: 1440/835;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 
 .top__concept {
   text-align: center;
   padding-top: 3.2rem;
   padding-bottom: 4.8rem;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .top__concept {
+    padding-top: 8.2rem;
+    padding-bottom: 6.7rem;
+  }
 }
 .top__concept h1 {
   font-size: 1.8rem;
   color: #215849;
   margin-bottom: 1.8rem;
+}
+@media screen and (min-width: 768px) {
+  .top__concept h1 {
+    font-size: 6rem;
+    margin-bottom: 4.8rem;
+  }
+}
+
+.top__concept__logo1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  aspect-ratio: 48/75;
+  width: 10.7638888889vw;
+}
+@media screen and (min-width: 768px) {
+  .top__concept__logo1 {
+    top: -2rem;
+    width: 15.5rem;
+  }
+}
+
+.top__concept__logo2 {
+  position: absolute;
+  top: 3.3rem;
+  right: 0;
+  width: 4.9rem;
+  aspect-ratio: 49/77;
+  width: 19.0277777778vw;
+}
+@media screen and (min-width: 768px) {
+  .top__concept__logo2 {
+    top: 1rem;
+    width: 27.4rem;
+  }
 }
 
 .top__concept__grid {
@@ -693,46 +889,85 @@ a {
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .top__concept__grid {
+    width: 100%;
+    margin-top: 10.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8rem;
+  }
+}
 
 .top__concept__grid__item {
   width: 14.1rem;
   height: 14.1rem;
   border: 1px solid #215849;
 }
-.top__concept__grid__item p {
+@media screen and (min-width: 768px) {
+  .top__concept__grid__item {
+    width: 27.5rem;
+    height: 27.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .top__concept__grid__item p {
+    font-size: 2.8rem;
+  }
+}
+
+.top__concept__grid-item1 p,
+.top__concept__grid-item2 p,
+.top__concept__grid-item3 p {
   margin-top: 2.2rem;
 }
-
-.top__concept__grid-item1 .top__concept__grid__image {
-  width: 8.7rem;
-  margin-top: 0.4rem;
+@media screen and (min-width: 768px) {
+  .top__concept__grid-item1 p,
+  .top__concept__grid-item2 p,
+  .top__concept__grid-item3 p {
+    margin-top: 4.9rem;
+  }
 }
-
-.top__concept__grid-item2 .top__concept__grid__image {
-  width: 9.1rem;
-  margin-top: 0.4rem;
-}
-
+.top__concept__grid-item1 .top__concept__grid__image,
+.top__concept__grid-item2 .top__concept__grid__image,
 .top__concept__grid-item3 .top__concept__grid__image {
-  width: 7.6rem;
-  margin-top: 1.2rem;
+  margin-top: 1.3rem;
 }
 
 .top__concept__grid-item4 p {
   margin-top: 1.3rem;
 }
+@media screen and (min-width: 768px) {
+  .top__concept__grid-item4 p {
+    margin-top: 3.4rem;
+  }
+}
 .top__concept__grid-item4 .top__concept__grid__image {
-  width: 7.3rem;
-  margin-top: 1.2rem;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .top__concept__grid-item4 .top__concept__grid__image {
+    margin-top: 0;
+  }
 }
 
 .top__concept__grid__image {
+  width: 7.8rem;
   aspect-ratio: 1/1;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .top__concept__grid__image {
+    width: 14.9rem;
+  }
 }
 
 .top__concept__p1 {
   margin-top: 2.6rem;
+}
+@media screen and (min-width: 768px) {
+  .top__concept__p1 {
+    margin-top: 9rem;
+  }
 }
 
 .top__concept__flex {
@@ -743,6 +978,9 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 3.2rem;
 }
 
@@ -750,7 +988,17 @@ a {
   width: 6.2rem;
   aspect-ratio: 62/77;
 }
+@media screen and (min-width: 768px) {
+  .top__concept__flex__image {
+    width: 20rem;
+  }
+}
 
 .top__concept__btn {
   margin-top: 4.6rem;
+}
+@media screen and (min-width: 768px) {
+  .top__concept__btn {
+    margin-top: 0rem;
+  }
 }/*# sourceMappingURL=style.css.map */

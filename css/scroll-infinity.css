@@ -1,0 +1,47 @@
+@-webkit-keyframes infinity-scroll-right {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes infinity-scroll-right {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+.scroll-infinity__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.scroll-infinity__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.scroll-infinity__list--right {
+  -webkit-animation: infinity-scroll-right 80s infinite linear 0.5s both;
+          animation: infinity-scroll-right 80s infinite linear 0.5s both;
+}
+
+.scroll-infinity__item {
+  width: 20vw;
+}
+
+.scroll-infinity__item > img {
+  width: 100%;
+}/*# sourceMappingURL=scroll-infinity.css.map */
