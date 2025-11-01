@@ -12,6 +12,17 @@
     border: 1px solid $color-accent;
     color: $color-white;
     text-align: center;
+    @include pc {
+        width: 53.5rem;
+        height: 10rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+        @include pc {
+            font-size: 3rem;
+        }
+    }
 
     @include transition;
     &:hover {
@@ -30,8 +41,13 @@
 
 .c-btn-arrow:hover{ filter:brightness(1.05); }
 .c-btn-arrow-arrow{
-    width:15px; height:15px;
+    width:15px; 
+    height:15px;
     transition:transform .2s ease;
+    @include pc {
+        width: 3rem;
+        height: 3rem;
+    }
 }
 .c-btn-arrow:hover .c-btn-arrow-arrow{
     transform:translateX(4px); /* 右に4px動かす */

@@ -1,0 +1,83 @@
+// @keyframes infinity-scroll-right {
+//     from {
+//       transform: translateX(-100%);
+//     }
+//     to {
+//       transform: translateX(0);
+//     }
+// }
+
+// .scroll-infinity__wrap {
+//     display: flex;
+//     overflow: hidden;
+// }
+// .scroll-infinity__list {
+//     display: flex;
+//     list-style: none;
+//     padding-right: 0;
+// }
+// .scroll-infinity__list--right {
+//     animation: infinity-scroll-right 50s infinite linear 0.5s both;
+// }
+// .scroll-infinity__item {
+//     width: calc(100vw / 2);
+//     // width: 15.7rem;
+//     // aspect-ratio: 157/105;
+//     // flex-shrink: 0; 
+//     // @include pc {
+//     //     width: 43.9rem;
+//     // }
+//     // height: 10.5rem;
+//     // aspect-ratio: 157/105;
+//     flex-shrink: 0; 
+
+// }
+
+@keyframes infinity-scroll-left{
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+  }
+  
+.scroll-infinity__wrap{
+    display:flex;
+    overflow:hidden;
+}
+
+.scroll-infinity__list{
+    display:flex;
+    margin:0; padding:0; list-style:none;
+    flex-shrink:0;
+    animation: infinity-scroll-left 80s linear infinite;
+    will-change: transform;
+    gap: 1rem;
+    @include pc {
+        gap: 3.8rem;
+    }
+}
+
+.scroll-infinity__item{
+    width: 15.7rem;
+    aspect-ratio: 157/105;
+    margin-right: 0rem;
+    @include pc {
+        width: 43.9rem;
+    }
+}
+
+.scroll-infinity__item:last-child {
+    margin-right: 1.2rem; // ← 余白調整
+    @include pc {
+        margin-right: 3.8rem;
+    }
+}
+
+.scroll-infinity__item > img{
+    display:block; 
+    width:100%;
+}
+
+/* 念のため：img/LIへの余計なanimation/transformを無効化 */
+.scroll-infinity__item, .scroll-infinity__item img{
+    animation: none;
+    transform: none;
+}
