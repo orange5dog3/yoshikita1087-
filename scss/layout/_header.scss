@@ -1,0 +1,26 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: $color-white;
+}
+
+
+.header-content {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    height: 8rem;
+
+    @include pc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+}
+
+.header__logo a {
+    width: 7.5rem;
+}
+

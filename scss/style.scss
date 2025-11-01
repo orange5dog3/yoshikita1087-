@@ -6,7 +6,6 @@
 @import "foundation/reset";
 @import "foundation/variable";
 @import "foundation/base";
-@import "foundation/slick";
 
 // ==========================================================================
 // Layout
@@ -20,3 +19,12 @@
 
 // Component
 @import "object/component/component";
+@import "object/component/hamburger";
+@import "object/component/font";
+
+// project
+@import "object/project/top";
+@import "object/project/price";
+@import "object/project/treatment";
+@import "object/project/access";
+@import "object/project/question";
