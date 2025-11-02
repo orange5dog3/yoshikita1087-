@@ -1,0 +1,150 @@
+footer {
+    padding-top: 4.34em;
+    padding-bottom: 3.7em;
+    @include pc {
+        padding-top: 9.5rem;
+        padding-bottom: 4.4rem;
+    }
+}
+
+.footer__flex {
+    
+    @include pc {
+        display: flex;
+        gap: 4.3rem;
+        gap: 0rem;
+    }
+}
+
+.footer__logo {
+    width: 11.5rem;
+    aspect-ratio: 115/110;
+    margin-inline: auto;
+    text-align: center;
+
+
+    @include pc {
+        width: 32.9rem;
+        text-align: left;
+        margin-inline: 0rem;
+    }
+}
+
+.footer__content {
+    margin-top: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.9rem;
+    text-align: center;
+
+    @include pc {
+        gap: 2.6rem;
+        margin-top: 0rem;
+        text-align: left;
+        padding-left: 6.7rem;
+        padding-top: 2.0rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        @include pc {
+            font-size: 2.5rem;
+            line-height: 1.5;
+        }
+    }
+}
+
+.footer__title {
+    font-size: 2.5rem;
+    @include pc {
+        font-size: 6rem !important;
+        line-height: 1 !important;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.footer__link {
+    margin-top: 5.9rem;
+    font-size: 1.2rem;
+    @include pc {
+        margin-top: 0rem;
+        font-size: 2.5rem;
+        padding-left: 13.6rem;
+        padding-top: 8.1rem;
+    }
+
+    ul {
+        display: grid;
+        grid-auto-flow: column;          // 行→列の順で埋める
+        grid-template-rows: repeat(3, auto); 
+        column-gap: 5.6rem;
+        row-gap: 1.7rem;
+        justify-content: center; 
+        @include pc {
+            display: flex;
+            flex-direction: column;
+            column-gap: 11.2rem;
+            row-gap: 3rem;
+            justify-content: left;
+        }
+    }
+}
+
+.footer__cta {
+    max-width: 34rem;
+    margin-top: 4.7rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include pc {
+        max-width: 111rem;
+        margin-top: 5.6rem;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 31rem;
+        padding-left: 29.1rem;
+    }
+}
+
+.footer__cta-tel {
+    a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        @include pc {
+            gap: 1.8rem;
+        }
+
+        img {
+            width: 2.5rem;
+            height: 2.5rem;
+            @include pc {
+                width: 3.1rem;
+                height: 3.1rem;
+            }
+        }
+
+        p {
+            font-size: 1.5rem;
+            @include pc {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+.footer__cta-sns {
+    display: flex;
+    gap: 2.3rem;
+    a {
+        img {
+            width: 5rem;
+            height: 5rem;
+            @include pc {
+                width: 7.1rem;
+                height: 7.1rem;
+            }
+        }
+    }
+}
