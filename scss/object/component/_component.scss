@@ -52,3 +52,66 @@
 .c-btn-arrow:hover .c-btn-arrow-arrow{
     transform:translateX(4px); /* 右に4px動かす */
 }
+
+// cta------------------------------------
+.c-cta {
+    display: flex;
+    flex-direction: column;
+    @include pc {
+        flex-direction: row;
+    }
+}
+
+.c-cta__item {
+    text-align: center;
+    width: 100%;
+    height: 10.6rem;
+    color: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    @include pc {
+        height: 20rem;
+    }
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        @include pc {
+            gap: 2.5rem;
+        }
+    }
+
+    p {
+        font-size: 1.5rem;
+        @include pc {
+            font-size: 3rem;
+        }
+    }
+}
+
+.c-cta__item-icon {
+    width: 2rem;
+    height: 2rem;
+    @include pc {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.cta__reserve {
+    background-color: $color-accent;
+}
+
+.cta__contact {
+    background-color: $color-gray;
+}

@@ -279,3 +279,173 @@ h2 {
         margin-top: 10rem;
     }
 }
+
+
+// price------------------------------------
+.top__price {
+    background: url(../image/image_top_price_bg.jpg) top center / cover no-repeat;
+    padding-top: 2rem;
+    padding-bottom: 3.4rem;
+    text-align: center;
+    @include pc {
+        padding-top: 14rem;
+        padding-bottom: 9.5rem;
+    }
+}
+
+.top__price__p1 {
+    margin-top: 2.5rem;
+    display: inline-block; 
+    @include pc {
+        margin-top: 7rem;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: $color-black;
+    }
+}
+
+.top__price__list {
+    margin-top: 6rem;
+    padding-left: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4.5rem;
+    @include pc {
+        margin-top: 12rem;
+        flex-direction: row;
+        gap: 10rem;
+    }
+}
+
+.top__price__list__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8.4rem;
+    @include pc {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5.6em;
+    }
+}
+
+.top__price__list__item-time {
+    font-size: 1.1rem;
+    color: $color-white;
+    position: relative;
+    z-index: 2;
+    @include pc {
+        font-size: 2.6rem;
+    }
+
+    &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);   
+        content: "";
+        display: block;
+        width: 4.4rem;
+        height: 4.4rem;
+        border-radius: 50%;
+        background-color: $color-gray;
+        border: 1px solid $color-black;
+        z-index: -1; // 背景に配置して文字を前面に
+        @include pc {
+            width: 9.5rem;
+            height: 9.5rem;
+        }
+    }
+}
+
+.top__price__list__item-price {
+    font-size: 2.5rem;
+    @include pc {
+        font-size: 8rem;
+        padding-left: 4rem;
+    }
+}
+
+.top__price__btn {
+    margin-top: 6rem;
+    @include pc {
+        margin-top: 11rem;
+    }
+}
+
+// access------------------------------------
+.top__access {
+    padding-top: 4.4rem;
+    padding-bottom: 6.9rem;
+    @include pc {
+        padding-top: 14rem;
+        padding-bottom: 14rem;
+    }
+}
+
+.top__access__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3.1rem;
+    margin-top: 0.8rem;
+    margin-inline: auto;
+    @include pc {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 5rem;
+        margin-top: 10rem;
+    }
+}
+
+.top__access__map {
+    width: 28rem;
+    aspect-ratio: 28/27;
+    @include pc {
+        width: 52rem;
+        aspect-ratio: 52/47;
+    }
+
+    p {
+        text-align: center;
+        @include pc {
+            font-size: 2.5rem;
+            margin-top: 3rem;
+        }
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+}
+
+.top__access__info {
+    padding-left: 1.4rem;
+    line-height: 1.35;
+    font-size: 1.2rem;
+    @include pc {
+        font-size: 3rem;
+    }
+}
+
+.top__access__info-p1 {
+    padding-left: 1.2rem;
+}
+
+.top__access__info-p2,
+.top__access__info-p3 {
+    margin-top: 1.2rem;
+    @include pc {
+        margin-top: 6rem;
+    }
+}
