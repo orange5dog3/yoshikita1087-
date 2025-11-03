@@ -62,7 +62,7 @@
                 </div>
             </header>
             <main class="top header-padding">
-                <div class="top__fv">
+                <div id="first-view" class="top__fv">
                     <picture>
                         <source srcset="image/image_top_fv_pc.jpg" media="(min-width: 768px)">
                         <img src="image/image_top_fv_sp.jpg" alt="The stretch">
@@ -114,7 +114,7 @@
     
                         <div class="top__concept__flex">
                             <div class="top__concept__flex__image">
-                                <img src="image/image_top_concept_staff1.jpg" alt="The stretch">
+                                <img src="image/image_top_concept_staff2.jpg" alt="staff">
                             </div>
                             <div class="top__concept__btn sp_none">
                                 <a href="treatment.html" class="c-green-btn c-flex-arrow">
@@ -123,7 +123,7 @@
                                 </a>
                             </div>
                             <div class="top__concept__flex__image">
-                                <img src="image/image_top_concept_staff2.jpg" alt="The stretch">
+                                <img src="image/image_top_concept_staff1.jpg" alt="staff">
                             </div>
                         </div>
     
@@ -213,7 +213,7 @@
                         </div>
 
                         <div class="top__staff__btn">
-                            <a href="#" class="c-green-btn c-flex-arrow">
+                            <a href="https://coubic.com/naricom" class="c-green-btn c-flex-arrow" target="_blank">
                                 <p>ご予約はこちら</p>
                                 <img src="image/icon_arrow.svg" alt="" aria-hidden="true" class="c-btn-arrow-arrow">
                             </a>
@@ -284,7 +284,6 @@
                         <div class="top__access__box">
                             <div class="top__access__map">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.678170311982!2d135.51355527659052!3d34.66282977293306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e750712172ab%3A0x3acb9ce419d7964e!2z44CSNTQzLTAwMDIg5aSn6Ziq5bqc5aSn6Ziq5biC5aSp546L5a-65Yy65LiK5rGQ77yU5LiB55uu77yV4oiS77yYIExhIENBU0HkuIrmsZAgMTAx!5e0!3m2!1sja!2sjp!4v1762075737758!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                <p class="sp_none ff-zenkaku">Google MAPで見る</p>
                             </div>
                             <div class="top__access__info ff-zenkaku">
                                 <p class="top__access__info-p1">
@@ -310,22 +309,18 @@
                 </section>
 
                 <div class="c-cta">
-                    <div class="cta__reserve c-cta__item">
-                        <a href="#">
-                            <p>ご予約</p>
-                            <div class="c-cta__item-icon">
-                                <img src="image/icon_memo.svg" alt="" aria-hidden="true" class="c-btn-arrow-arrow">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cta__contact c-cta__item">
-                        <a href="#">
-                            <p>お問い合わせ</p>
-                            <div class="c-cta__item-icon">
-                                <img src="image/icon_chat.svg" alt="" aria-hidden="true" class="c-btn-arrow-arrow">
-                            </div>
-                        </a>
-                    </div>
+                    <a href="https://coubic.com/naricom" class="c-cta__reserve c-cta__item" target="_blank">
+                        <p>ご予約</p>
+                        <div class="c-cta__item-icon">
+                            <img src="image/icon_memo.svg" alt="" aria-hidden="true">
+                        </div>
+                    </a>
+                    <a href="#" class="c-cta__contact c-cta__item">
+                        <p>お問い合わせ</p>
+                        <div class="c-cta__item-icon">
+                            <img src="image/icon_chat.svg" alt="" aria-hidden="true">
+                        </div>
+                    </a>
                 </div>
 
             </main>
@@ -378,17 +373,40 @@
                             </a>
                         </div>
                         <div class="footer__cta-sns">
-                            <a href="#">
+                            <a href="https://lin.ee/hrjK1u8" target="_blank">
                                 <img src="image/icon_line.svg" alt="Line">
                             </a>
-                            <a href="#">
+                            <a href="https://www.instagram.com/_the.stretch_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
                                 <img src="image/icon_insta.svg" alt="Instagram">
                             </a>
                         </div>
                     </div>
+
+                    <div class="footer__copyright">
+                        <p class="ff-zenkaku">
+                            Copyright &copy; 2025 The stretch.
+                        </p>
+                    </div>
                    
                 </div>
             </footer>
+
+            <div id="fixed-btn" class="fixed-btn">
+
+                <a href="https://coubic.com/naricom" class="c-fixed__btn c-fixed__btn-reserve" target="_blank">
+                    <p>ご予約</p>
+                    <div class="c-fixed__btn-icon">
+                        <img src="image/icon_memo2.svg" alt="" aria-hidden="true">
+                    </div>
+                </a>
+                <a href="#" class="c-fixed__btn c-fixed__btn-contact">
+                    <p>お問い合わせ</p>
+                    <div class="c-fixed__btn-icon">
+                        <img src="image/icon_line.svg" alt="" aria-hidden="true">
+                    </div>
+                </a>
+
+            </div>
         </div>
         <!-- jquery読み込み -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

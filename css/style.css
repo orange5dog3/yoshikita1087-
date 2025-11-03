@@ -740,6 +740,24 @@ footer {
   }
 }
 
+.footer__copyright {
+  margin-top: 4.7rem;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footer__copyright {
+    margin-top: 7.6rem;
+  }
+}
+.footer__copyright p {
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__copyright p {
+    font-size: 2rem;
+  }
+}
+
 .c-green-btn {
   display: block;
   width: 29rem;
@@ -829,8 +847,6 @@ footer {
 
 .c-cta__item {
   text-align: center;
-  width: 100%;
-  height: 10.6rem;
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -841,6 +857,8 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  height: 10.6rem;
 }
 @media screen and (min-width: 768px) {
   .c-cta__item {
@@ -890,12 +908,81 @@ footer {
      object-fit: cover;
 }
 
-.cta__reserve {
+.c-cta__reserve {
   background-color: #215849;
 }
 
-.cta__contact {
+.c-cta__contact {
   background-color: #8E948C;
+}
+
+.fixed-btn {
+  position: fixed;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.c-fixed__btn {
+  width: 5rem;
+  height: 13rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.4rem;
+}
+@media screen and (min-width: 768px) {
+  .c-fixed__btn {
+    width: 10.7rem;
+    height: 26rem;
+  }
+}
+.c-fixed__btn p {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 1rem;
+  line-height: 1;
+}
+@media screen and (min-width: 768px) {
+  .c-fixed__btn p {
+    font-size: 1.8rem;
+  }
+}
+
+.c-fixed__btn-reserve {
+  background-color: #D9D9D9;
+}
+
+.c-fixed__btn-contact {
+  background-color: #8E948C;
+}
+
+.c-fixed__btn-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+@media screen and (min-width: 768px) {
+  .c-fixed__btn-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
 }
 
 .hamburger {
@@ -1632,15 +1719,6 @@ h2 span {
   .top__access__map {
     width: 52rem;
     aspect-ratio: 52/47;
-  }
-}
-.top__access__map p {
-  text-align: center;
-}
-@media screen and (min-width: 768px) {
-  .top__access__map p {
-    font-size: 2.5rem;
-    margin-top: 3rem;
   }
 }
 .top__access__map iframe {
