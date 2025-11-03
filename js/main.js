@@ -65,7 +65,7 @@ $(window).scroll(function() {
                     "position":"absolute",
                     "right": "0rem",
                     "top": "auto",
-                    "bottom": footHeight + 21, 
+                    "bottom": footHeight + 212, 
                 });
             } else {
                 // PC版：footer到達時
@@ -73,7 +73,7 @@ $(window).scroll(function() {
                     "position":"absolute",
                     "right": "0rem",
                     "top": "auto",
-                    "bottom": footHeight + 20, 
+                    "bottom": footHeight + 140, 
                 });
             }
         } else {
