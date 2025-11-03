@@ -117,16 +117,35 @@
 }
 
 // fixed-btn------------------------------------
-#container {
+main {
     position: relative;
 }
 
 .fixed-btn {
-    position: fixed;
+    width: 5rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
     z-index: 999;
-    display: flex;
-    flex-direction: column;
-    
+    // display: none;
+    pointer-events: none;
+
+    @include pc {
+        width: 10.7rem;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: sticky;
+        top: 8rem;
+        right: 0;
+        @include pc {
+            top: 15.6rem;
+        }
+    }
 }
 
 .c-fixed__btn {
