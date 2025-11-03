@@ -926,7 +926,7 @@ main {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 999;
+  z-index: 99;
   pointer-events: none;
 }
 @media screen and (min-width: 768px) {
