@@ -916,6 +916,10 @@ footer {
   background-color: #8E948C;
 }
 
+#container {
+  position: relative;
+}
+
 .fixed-btn {
   position: fixed;
   z-index: 999;

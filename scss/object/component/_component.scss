@@ -117,6 +117,10 @@
 }
 
 // fixed-btn------------------------------------
+#container {
+    position: relative;
+}
+
 .fixed-btn {
     position: fixed;
     z-index: 999;

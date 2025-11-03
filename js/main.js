@@ -64,14 +64,16 @@ $(window).scroll(function() {
                 $("#fixed-btn").css({
                     "position":"absolute",
                     "right": "0rem",
-                    "bottom": footHeight + 1, 
+                    "top": "auto",
+                    "bottom": footHeight + 21, 
                 });
             } else {
                 // PC版：footer到達時
                 $("#fixed-btn").css({
                     "position":"absolute",
                     "right": "0rem",
-                    "bottom": footHeight + 1, 
+                    "top": "auto",
+                    "bottom": footHeight + 20, 
                 });
             }
         } else {
@@ -81,6 +83,7 @@ $(window).scroll(function() {
                     "position":"fixed",
                     "right": "0rem",
                     "top": "8rem",
+                    "bottom": "auto",
                 });
             } else {
                 // PC版：通常時
@@ -88,18 +91,11 @@ $(window).scroll(function() {
                     "position":"fixed",
                     "right": "0rem",
                     "top": "15.6rem",
+                    "bottom": "auto",
                 });
             }
         }
     } else {
         $('#fixed-btn').fadeOut();
     }
-});
-
-// スムーススクロール
-$('#fixed-btn a').click(function() {
-    $('html,body').animate({
-        scrollTop: 0
-    }, 500);
-    return false;
 });
