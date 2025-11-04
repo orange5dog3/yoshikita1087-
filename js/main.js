@@ -40,62 +40,45 @@ $(".hamburger-trigger").click(
 // ==========================================================================
 // fixed-btn
 // ==========================================================================
-
-$(window).scroll(function() {
-    const scrollTop = $(this).scrollTop();
-    const fvHeight = $('#first-view').outerHeight();
-    const mainPaddingTop = parseInt($('.header-padding').css('padding-top'));
-    const threshold = fvHeight + mainPaddingTop;
-    
-    if (scrollTop > threshold && !$(".hamburger-menu").hasClass("active")) {
-        $('#fixed-btn').fadeIn();
-        
-        // footer制御ロジック
-        const scrollHeight = $(document).height();/*ページ全体の高さ*/
-        const scrollPosition = $(window).height() + $(window).scrollTop();/*ページの一番上からスクロールされた距離*/
-        const footHeight = $("footer").outerHeight();/*フッターの高さ*/
-
-        // SP版判定（768px未満）
-        const isMobile = $(window).width() < 768;
-        
-        if ( scrollHeight - scrollPosition  <= footHeight ) {
-            if (isMobile) {
-                // SP版：footer到達時
-                $("#fixed-btn").css({
-                    "position":"absolute",
-                    "right": "0rem",
-                    "top": "auto",
-                    "bottom": footHeight + 212, 
-                });
-            } else {
-                // PC版：footer到達時
-                $("#fixed-btn").css({
-                    "position":"absolute",
-                    "right": "0rem",
-                    "top": "auto",
-                    "bottom": footHeight + 140, 
-                });
-            }
-        } else {
-            if (isMobile) {
-                // SP版：通常時
-                $("#fixed-btn").css({
-                    "position":"fixed",
-                    "right": "0rem",
-                    "top": "8rem",
-                    "bottom": "auto",
-                });
-            } else {
-                // PC版：通常時
-                $("#fixed-btn").css({
-                    "position":"fixed",
-                    "right": "0rem",
-                    "top": "15.6rem",
-                    "bottom": "auto",
-                });
-            }
+$(function () {
+    const $fixedBtn = $("#fixed-btn");
+    // const $fv = $(".top__fv");
+    const $cta = $(".c-cta");
+  
+    let ctaInView = false; // c-ctaが見えているかのフラグ
+  
+    // 表示/非表示をまとめて制御
+    const applyVisibility = () => {
+      // cta が見えていないときのみ表示
+      if (!ctaInView) {
+        $fixedBtn.addClass("is-visible");
+      } else {
+        $fixedBtn.removeClass("is-visible");
+      }
+    };
+  
+    // スクロール・リサイズ時に判定
+    $(window).on("scroll resize", applyVisibility);
+  
+    // c-cta が「1pxでも」画面に入ったら非表示
+    if ($cta.length) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            ctaInView = entry.isIntersecting;
+            applyVisibility();
+          });
+        },
+        {
+          threshold: 0, // ← 1pxでも入った瞬間に反応
         }
+      );
+      observer.observe($cta[0]);
     } else {
-        $('#fixed-btn').fadeOut();
+      // c-ctaが存在しない場合は常に表示
+      ctaInView = false;
     }
+  
+    // 初回チェック
+    applyVisibility();
 });

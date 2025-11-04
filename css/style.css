@@ -916,8 +916,22 @@ footer {
   background-color: #8E948C;
 }
 
-#container {
-  position: relative;
+#fixed-btn {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: opacity 0.5s ease, visibility 0.5s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease, visibility 0.5s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+#fixed-btn.is-visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .fixed-btn {
@@ -930,6 +944,13 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  right: 0;
+  top: 8rem;
+}
+@media screen and (min-width: 768px) {
+  .fixed-btn {
+    top: 15.6rem;
+  }
 }
 
 .c-fixed__btn {
