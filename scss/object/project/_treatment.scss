@@ -1,0 +1,72 @@
+.treatment {
+    h1 {
+        text-align: center;
+        font-size: 1.8rem;
+        color: $color-accent;
+        @include pc {
+            font-size: 6rem;
+            line-height: 0.8;
+
+        }
+        span {
+            font-size: 1rem;
+            @include pc {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        @include pc {
+            font-size: 4.5rem;
+        }
+    }
+}
+
+// about stretch------------------------------------
+.treatment__about-stretch {
+    padding-top: 4.2rem;
+    padding-bottom: 4.8rem;
+    @include pc {
+        padding-top: 9.0rem;
+        padding-bottom: 7.9rem;
+    }
+}
+
+.treatment__about-stretch__flex {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    @include pc {
+        flex-direction: row-reverse;
+        gap: 4.4rem;
+    }
+}
+
+.treatment__about-stretch__flex__text {
+    margin-inline: auto;
+    h2 {
+        text-align: center;
+    }
+
+    p {
+        margin-top: 0.8rem;
+        line-height: 2;
+        @include pc {
+            margin-top: 4.4rem;
+            line-height: 1.8;
+        }
+    }
+
+}
+
+.treatment__about-stretch__flex__image {
+    margin-inline: auto;
+    width: 21.4rem;
+    aspect-ratio: 214/161;
+    @include pc {
+        width: 51.7rem;
+        aspect-ratio: 517/375;
+    }
+}
