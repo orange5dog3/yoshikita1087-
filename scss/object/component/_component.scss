@@ -117,8 +117,17 @@
 }
 
 // fixed-btn------------------------------------
-#container {
-    position: relative;
+#fixed-btn {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+}
+
+#fixed-btn.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .fixed-btn {
@@ -126,7 +135,11 @@
     z-index: 999;
     display: flex;
     flex-direction: column;
-    
+    right: 0;
+    top: 8rem;
+    @include pc {
+        top: 15.6rem;
+    }
 }
 
 .c-fixed__btn {
