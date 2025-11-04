@@ -1,0 +1,14 @@
+// Swiperコンポーネント
+
+.swiper-slide {
+    width: 100%;
+    aspect-ratio: 390/211;
+    @include pc {
+        aspect-ratio: 1440/835;
+    }
+
+    img {
+        object-fit: cover;
+        height: 100%;
+    }
+}

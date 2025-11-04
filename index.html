@@ -20,6 +20,7 @@
         <!-- <meta property="og:description" content="全人類、ミュージシャン計画。私たちは音楽を愛するすべての人が、音楽に熱狂できる世界を目指しています。"> -->
         
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
     </head>
     <body>
         <div id="container">
@@ -63,10 +64,30 @@
             </header>
             <main class="top header-padding">
                 <div id="first-view" class="top__fv">
-                    <picture>
-                        <source srcset="image/image_top_fv_pc.jpg" media="(min-width: 768px)">
-                        <img src="image/image_top_fv_sp.jpg" alt="The stretch">
-                    </picture>
+                    <!-- スライダーのコンテナ -->
+                    <div class="swiper">
+                        <!-- 必要に応じたwrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- スライド -->
+                            <div class="swiper-slide">
+                                <img src="image/image_top_fv1.jpg" alt="The stretch">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="image/image_top_fv2.jpg" alt="The stretch">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="image/image_top_fv3.jpg" alt="The stretch">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="image/image_top_fv4.jpg" alt="The stretch">
+                            </div>
+                        </div>
+                        <!-- 必要に応じてページネーション -->
+                        <div class="swiper-pagination"></div>
+                        <!-- 必要に応じてナビボタン -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
                 </div>
 
                 <section class="top__concept">
@@ -410,7 +431,8 @@
         </div>
         <!-- jquery読み込み -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <!-- slick読み込み -->
+        <!-- swiper読み込み -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

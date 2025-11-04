@@ -1215,16 +1215,19 @@ footer {
           transform: none;
 }
 
-.top__fv {
+.swiper-slide {
   width: 100%;
   aspect-ratio: 390/211;
 }
 @media screen and (min-width: 768px) {
-  .top__fv {
+  .swiper-slide {
     aspect-ratio: 1440/835;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
+}
+.swiper-slide img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
 }
 
 .top__concept {
