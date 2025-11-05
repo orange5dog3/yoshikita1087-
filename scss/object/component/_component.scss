@@ -181,3 +181,12 @@
         height: 3.5rem;
     }
 }
+
+
+/* ハンバーガー開時は fixed-btn を非表示 */
+body.menu-open #fixed-btn {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    // transition: opacity 0.2s ease;
+  }
