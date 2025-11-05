@@ -62,7 +62,7 @@
 // ハンバーガーメニュー
 .hamburger-menu {
     position: fixed;
-    top: 5rem;
+    top: 8rem;
     right: 0;
     width: 30rem;
     background: $color-accent;
@@ -85,7 +85,7 @@
             li {
                 a {
                     display: block;
-                    padding: 1.5rem 0 1rem 2rem;
+                    padding: 1.5rem 0 1.5rem 2rem;
                     @include text-style(1.8rem, calc(33/18));
                     text-decoration: none;
                     color: $color-white;
@@ -110,7 +110,7 @@
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    z-index: 998;
+    z-index: 1001;
     pointer-events: none;
 
     &.active {

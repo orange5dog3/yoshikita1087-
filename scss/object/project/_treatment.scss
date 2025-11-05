@@ -3,9 +3,11 @@
         text-align: center;
         font-size: 1.8rem;
         color: $color-accent;
+        margin-top: 2.7rem;
         @include pc {
             font-size: 6rem;
             line-height: 0.8;
+            margin-top: 6.4rem;
 
         }
         span {
@@ -18,6 +20,7 @@
 
     h2 {
         font-size: 1.5rem;
+        text-align: center;
         @include pc {
             font-size: 4.5rem;
         }
@@ -26,11 +29,51 @@
 
 // about stretch------------------------------------
 .treatment__about-stretch {
-    padding-top: 4.2rem;
+    padding-top: 4.0rem;
     padding-bottom: 4.8rem;
     @include pc {
         padding-top: 9.0rem;
         padding-bottom: 7.9rem;
+    }
+
+    .inner {
+        text-align: center;
+    }
+
+    h3 {
+        margin-top: 4.0rem;
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 1.6;
+        display: inline-block;
+        margin-inline: auto;
+        text-decoration: underline;
+        text-decoration-thickness: 1px; // 線の太さ
+        text-underline-offset: 4px; // テキストと
+        position: relative;
+        @include pc {
+            margin-top: 7.8rem;
+            font-size: 4rem;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -0.8rem;
+            left: -3.4rem;
+            display: block;
+            width: 3.4rem;
+            aspect-ratio: 34/42;
+            background-image:  url("../image/logo_treatment2.svg");
+            background-size: cover;         // 枠いっぱいに拡大
+            background-position: center;    // 中央基準
+            background-repeat: no-repeat;
+            @include pc {
+                top: -1.8rem;
+                left: -6.8rem;
+                width: 6.9rem;
+            }
+        }
     }
 }
 
@@ -40,14 +83,40 @@
     gap: 2.4rem;
     @include pc {
         flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
         gap: 4.4rem;
     }
 }
 
 .treatment__about-stretch__flex__text {
     margin-inline: auto;
+    @include pc {
+        margin-inline: 0;
+    }
     h2 {
         text-align: center;
+        position: relative;
+        width: max-content;
+        margin-inline: auto;
+        &::after {
+            content: "";
+            position: absolute;
+            top: -2.5rem;
+            right: -4.8rem;
+            display: block;
+            width: 4.4rem;
+            aspect-ratio: 44/44;
+            background-image:  url("../image/logo_treatment1.svg");
+            background-size: cover;         // 枠いっぱいに拡大
+            background-position: center;    // 中央基準
+            background-repeat: no-repeat;
+            @include pc {
+                top: -5.8rem;
+                right: -9.2rem;
+                width: 8.6rem;
+            }
+        }
     }
 
     p {
@@ -68,5 +137,121 @@
     @include pc {
         width: 51.7rem;
         aspect-ratio: 517/375;
+        margin-inline: 0;
+    }
+}
+
+.treatment__about-stretch__list {
+    margin-top: 1.9rem;
+    margin-inline: auto;
+    width: max-content;
+
+    @include pc {
+        margin-top: 5.4em;  
+    }
+    ul {
+        li {
+            font-family: $ff-zenkaku;
+            font-size: 1.2rem;
+            line-height: 2;
+            text-align: left;
+            position: relative;
+            @include pc {
+                font-size: 3rem;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -2.4rem;
+                display: block;
+                width: 1.4rem;
+                aspect-ratio: 14/12;
+                background-image:  url("../image/logo_treatment3.svg");
+                background-size: cover;         // 枠いっぱいに拡大
+                background-position: center;    // 中央基準
+                background-repeat: no-repeat;
+                @include pc {
+                    left: -6.8rem;
+                    width: 4.3rem;
+                }
+            }
+        }
+    }
+}
+
+// stretch effect------------------------------------
+.treatment__stretch-effect {
+    padding-top: 4.1rem;
+    padding-bottom: 2.4rem;
+    background-image: url("../image/image_treatment_bg_sp.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include pc {
+        padding-top: 9.0rem;
+        padding-bottom: 10rem;
+        background-image: url("../image/image_treatment_bg_pc.jpg");
+    }
+}
+
+.treatment__stretch-effect__list {
+    margin-top: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @include pc {
+        margin-top: 6rem;
+    }
+
+
+    li {
+        margin-inline: auto;
+        padding-left: 1rem;
+
+        width: 29rem;
+        height: 5rem;
+        background-color: $color-accent;
+        border: 1px solid $color-black;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        @include pc {
+            width: 35rem;
+            height: 24.2rem;
+        }
+    }
+}
+
+.treatment__stretch-effect__number {
+    font-size: 4rem;
+    color: $color-gray-light;
+    opacity: 0.33;
+    width: 3.2rem;
+    @include pc {
+        font-size: 13rem;
+    }
+}
+
+.treatment__stretch-effect__title {
+    font-size: 1.5rem;
+    color: $color-white;
+    width: 9rem;
+    @include pc {
+        font-size: 3.5rem;
+    }
+}
+
+.treatment__stretch-effect__description {
+    font-size: 1rem;
+    color: $color-white;
+    font-weight: 100;
+    flex: 1;
+    padding-left: 1rem;
+    @include pc {
+        font-size: 2rem;
     }
 }
