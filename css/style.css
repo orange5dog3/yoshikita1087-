@@ -2020,9 +2020,36 @@ body.menu-open #fixed-btn {
     background-image: url("../image/image_treatment_bg_pc.jpg");
   }
 }
+.treatment__stretch-effect h2 {
+  position: relative;
+  margin-inline: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.treatment__stretch-effect h2::before {
+  content: "";
+  position: absolute;
+  top: -4.5rem;
+  left: -6.8rem;
+  display: block;
+  width: 6.5rem;
+  aspect-ratio: 55/86;
+  background-image: url("../image/logo_treatment4.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .treatment__stretch-effect h2::before {
+    top: -5.8rem;
+    left: -20.2rem;
+    width: 17.6rem;
+  }
+}
 
 .treatment__stretch-effect__list {
-  margin-top: 2.4rem;
+  margin-top: 2.6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2078,6 +2105,7 @@ body.menu-open #fixed-btn {
   font-size: 1.5rem;
   color: #ffffff;
   width: 9rem;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .treatment__stretch-effect__title {
@@ -2097,5 +2125,107 @@ body.menu-open #fixed-btn {
 @media screen and (min-width: 768px) {
   .treatment__stretch-effect__description {
     font-size: 2rem;
+  }
+}
+
+.treatment__stretch-menu {
+  padding-top: 7.1rem;
+  padding-bottom: 8.1rem;
+}
+@media screen and (min-width: 768px) {
+  .treatment__stretch-menu {
+    padding-top: 14.8rem;
+    padding-bottom: 19.6rem;
+  }
+}
+.treatment__stretch-menu h2 {
+  color: #215849;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-bottom: 0.5px solid #215849;
+  margin-inline: auto;
+}
+.treatment__stretch-menu h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #215849;
+}
+
+.treatment__stretch-menu__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 4rem;
+}
+@media screen and (min-width: 768px) {
+  .treatment__stretch-menu__flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 6.2rem;
+    margin-top: 14.2rem;
+  }
+}
+
+.treatment__stretch-menu__flex__text {
+  text-align: center;
+}
+.treatment__stretch-menu__flex__text h3 {
+  font-size: 1.5rem;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .treatment__stretch-menu__flex__text h3 {
+    font-size: 4.5rem;
+  }
+}
+.treatment__stretch-menu__flex__text h3::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -2.4rem;
+  display: block;
+  width: 1.4rem;
+  aspect-ratio: 14/12;
+  background-image: url("../image/logo_treatment3.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .treatment__stretch-menu__flex__text h3::before {
+    left: -6.8rem;
+    width: 4.3rem;
+  }
+}
+.treatment__stretch-menu__flex__text p {
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  .treatment__stretch-menu__flex__text p {
+    font-size: 2.5rem;
   }
 }/*# sourceMappingURL=style.css.map */

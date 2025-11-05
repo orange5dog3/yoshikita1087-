@@ -194,10 +194,38 @@
         padding-bottom: 10rem;
         background-image: url("../image/image_treatment_bg_pc.jpg");
     }
+
+   
+
+    h2 {
+        position: relative;
+        margin-inline: auto;
+        width: max-content;
+        &::before {
+            content: "";
+            position: absolute;
+            top: -4.5rem;
+
+            left: -6.8rem;
+            display: block;
+            width: 6.5rem;
+            aspect-ratio: 55/86;
+            background-image:  url("../image/logo_treatment4.svg");
+            background-size: cover;         // 枠いっぱいに拡大
+            background-position: center;    // 中央基準
+            background-repeat: no-repeat;
+            @include pc {
+                top: -5.8rem;
+                left: -20.2rem;
+                width: 17.6rem;
+            }
+        }
+
+    }
 }
 
 .treatment__stretch-effect__list {
-    margin-top: 2.4rem;
+    margin-top: 2.6rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -240,6 +268,7 @@
     font-size: 1.5rem;
     color: $color-white;
     width: 9rem;
+    text-align: center;
     @include pc {
         font-size: 3.5rem;
     }
@@ -253,5 +282,83 @@
     padding-left: 1rem;
     @include pc {
         font-size: 2rem;
+    }
+}
+
+// leaf配置、pC未達成
+
+.treatment__stretch-menu {
+    padding-top: 7.1rem;
+    padding-bottom: 8.1rem;
+    @include pc {
+        padding-top: 14.8rem;
+        padding-bottom: 19.6rem;
+    }
+
+    h2 {
+        color: $color-accent;
+        width: max-content;
+        border-bottom: 0.5px solid $color-accent;
+        margin-inline: auto;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $color-accent;
+        }
+    }
+}
+
+.treatment__stretch-menu__flex {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    @include pc {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 6.2rem;
+        margin-top: 14.2rem;
+    }
+}
+
+.treatment__stretch-menu__flex__text {
+    text-align: center;
+    h3 {
+        font-size: 1.5rem;
+        position: relative;
+        @include pc {
+            font-size: 4.5rem;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -2.4rem;
+            display: block;
+            width: 1.4rem;
+            aspect-ratio: 14/12;
+            background-image:  url("../image/logo_treatment3.svg");
+            background-size: cover;         // 枠いっぱいに拡大
+            background-position: center;    // 中央基準
+            background-repeat: no-repeat;
+            @include pc {
+                left: -6.8rem;
+                width: 4.3rem;
+            }
+        }
+    }
+
+    p {
+        font-size: 1.2rem;
+        @include pc {
+            font-size: 2.5rem;
+        }
     }
 }
