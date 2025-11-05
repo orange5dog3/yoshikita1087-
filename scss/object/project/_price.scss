@@ -1,0 +1,146 @@
+.price {
+    
+
+    h1 {
+        text-align: center;
+        font-size: 1.8rem;
+        color: $color-accent;
+        margin-top: 2.7rem;
+        @include pc {
+            font-size: 6rem;
+            line-height: 0.8;
+            margin-top: 6.4rem;
+
+        }
+        span {
+            font-size: 1rem;
+            @include pc {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        text-align: center;
+        color: $color-accent;
+        @include pc {
+            font-size: 3.0rem;
+        }
+    }
+    
+}
+
+.price__content {
+    .inner {
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2.8rem;
+        margin-top: 4.4rem;
+        @include pc {
+            gap: 9.4rem;
+            margin-top: 10.4rem;
+        }
+    }
+}
+
+.price__content__item {
+    text-align: left;
+    width: 13.3rem;
+    @include pc {
+        width: 27.2rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+        @include pc {
+            font-size: 3.0rem;
+        }
+    }
+
+
+    ul {
+        width: 100%;
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.3rem;
+        margin-top: 1.0rem;
+        @include pc {
+            gap: 0.8rem;
+            margin-top: 2.6rem;
+        }
+
+        li {
+            width: 100%;
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+            gap: 3.2rem;
+            @include pc {
+                gap: 6.7rem;
+            }
+        }
+    }
+    
+}
+
+.price__content__item-time {
+    width: 35%;
+}
+
+.price__content__item-price {
+    flex: 1;
+}
+
+.price__content__item-discount {
+    font-size: 1rem;
+        text-align: center;
+        margin-top: 1.7rem;
+        @include pc {
+            font-size: 3.0rem;
+            margin-top: 5.6rem;
+        }
+}
+
+.price__content__item-note {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 4.7rem;
+    padding-bottom: 5.2rem;
+    @include pc {
+        font-size: 2.5rem;
+        margin-top: 13.5rem;
+        padding-bottom: 8.9rem;
+    }
+}
+
+
+.price__content__logo1 {
+    position: absolute;
+    top: 40rem;
+    left: 0;
+    aspect-ratio: 157/100;
+    width: vw(473, 1440);
+
+    @include pc {
+        top: 60em;
+    }
+ 
+}
+
+.price__content__logo2 {
+    position: absolute;
+    top: 12.3rem;
+    right: 0;
+    width: 14rem;
+    aspect-ratio: 142/90;
+    width: vw(449, 1440);
+    @include pc {
+        top: 10rem;
+    }
+ 
+}
