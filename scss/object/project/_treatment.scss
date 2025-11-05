@@ -206,17 +206,17 @@
             position: absolute;
             top: -4.5rem;
 
-            left: -6.8rem;
+            left: -7.2rem;
             display: block;
-            width: 6.5rem;
-            aspect-ratio: 55/86;
+            width: 7.5rem;
+            aspect-ratio: 65/86;
             background-image:  url("../image/logo_treatment4.svg");
             background-size: cover;         // 枠いっぱいに拡大
             background-position: center;    // 中央基準
             background-repeat: no-repeat;
             @include pc {
-                top: -5.8rem;
-                left: -20.2rem;
+                top: -9.8rem;
+                left: -17.2rem;
                 width: 17.6rem;
             }
         }
@@ -230,7 +230,13 @@
     flex-direction: column;
     gap: 2rem;
     @include pc {
+        max-width: 114rem;
         margin-top: 6rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4.3rem;
+        row-gap: 5.1rem;
+        margin-inline: auto;
     }
 
 
@@ -250,8 +256,22 @@
         @include pc {
             width: 35rem;
             height: 24.2rem;
+            flex-direction: column;
+            padding-left: 0rem;
+            padding-top: 1.2rem;
         }
     }
+}
+
+.treatment__stretch-effect__list__upper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.treatment__stretch-effect__list__lower {
+    width: 100%;
 }
 
 .treatment__stretch-effect__number {
@@ -261,6 +281,8 @@
     width: 3.2rem;
     @include pc {
         font-size: 13rem;
+        width: auto;
+        padding-left: 2.5rem;
     }
 }
 
@@ -271,6 +293,8 @@
     text-align: center;
     @include pc {
         font-size: 3.5rem;
+        flex: 1;
+
     }
 }
 
@@ -282,10 +306,12 @@
     padding-left: 1rem;
     @include pc {
         font-size: 2rem;
+        text-align: center;
+        padding-left: 0;
     }
 }
 
-// leaf配置、pC未達成
+// stretch menu------------------------------------
 
 .treatment__stretch-menu {
     padding-top: 7.1rem;
