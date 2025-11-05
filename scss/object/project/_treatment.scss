@@ -345,7 +345,6 @@
     align-items: center;
     margin-top: 4rem;
     @include pc {
-        flex-direction: row;
         justify-content: center;
         align-items: center;
         gap: 6.2rem;
@@ -353,10 +352,36 @@
     }
 }
 
+.treatment__stretch-menu__flex__item {
+    display: flex;
+    flex-direction: column;
+    @include pc {
+        width: 120rem;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+.treatment__stretch-menu__flex__image {
+    width: 25rem;
+    aspect-ratio: 250/150;
+    margin-inline: auto;
+    @include pc {
+        width: 52rem;
+        aspect-ratio: 520/280;
+    }
+}
+
 .treatment__stretch-menu__flex__text {
     text-align: center;
+    margin-top: 3rem;
+    @include pc {
+        margin-top: 0;
+        flex: 1;
+    }
     h3 {
         font-size: 1.5rem;
+        margin-inline: auto;
+        width: max-content;
         position: relative;
         @include pc {
             font-size: 4.5rem;
@@ -368,8 +393,8 @@
             transform: translateY(-50%);
             left: -2.4rem;
             display: block;
-            width: 1.4rem;
-            aspect-ratio: 14/12;
+            width: 2rem;
+            aspect-ratio: 20/18;
             background-image:  url("../image/logo_treatment3.svg");
             background-size: cover;         // 枠いっぱいに拡大
             background-position: center;    // 中央基準
@@ -383,8 +408,11 @@
 
     p {
         font-size: 1.2rem;
+        margin-top: 1.5rem;
+        line-height: 1.5;
         @include pc {
             font-size: 2.5rem;
+            margin-top: 4rem;
         }
     }
 }
