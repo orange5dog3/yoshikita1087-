@@ -2210,10 +2210,6 @@ body.menu-open #fixed-btn {
 }
 @media screen and (min-width: 768px) {
   .treatment__stretch-menu__flex {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -2225,11 +2221,58 @@ body.menu-open #fixed-btn {
   }
 }
 
+.treatment__stretch-menu__flex__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .treatment__stretch-menu__flex__item {
+    width: 120rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.treatment__stretch-menu__flex__image {
+  width: 25rem;
+  aspect-ratio: 250/150;
+  margin-inline: auto;
+}
+@media screen and (min-width: 768px) {
+  .treatment__stretch-menu__flex__image {
+    width: 52rem;
+    aspect-ratio: 520/280;
+  }
+}
+
 .treatment__stretch-menu__flex__text {
   text-align: center;
+  margin-top: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .treatment__stretch-menu__flex__text {
+    margin-top: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 .treatment__stretch-menu__flex__text h3 {
   font-size: 1.5rem;
+  margin-inline: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   position: relative;
 }
 @media screen and (min-width: 768px) {
@@ -2245,8 +2288,8 @@ body.menu-open #fixed-btn {
           transform: translateY(-50%);
   left: -2.4rem;
   display: block;
-  width: 1.4rem;
-  aspect-ratio: 14/12;
+  width: 2rem;
+  aspect-ratio: 20/18;
   background-image: url("../image/logo_treatment3.svg");
   background-size: cover;
   background-position: center;
@@ -2260,9 +2303,12 @@ body.menu-open #fixed-btn {
 }
 .treatment__stretch-menu__flex__text p {
   font-size: 1.2rem;
+  margin-top: 1.5rem;
+  line-height: 1.5;
 }
 @media screen and (min-width: 768px) {
   .treatment__stretch-menu__flex__text p {
     font-size: 2.5rem;
+    margin-top: 4rem;
   }
 }/*# sourceMappingURL=style.css.map */
