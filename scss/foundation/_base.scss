@@ -56,6 +56,13 @@ p {
     }
 }
 
+a{
+    @include transition;
+    &:hover {
+        filter: brightness(0.7);
+    }
+}
+
 @include pc{
     .pc_none{
         display: none;

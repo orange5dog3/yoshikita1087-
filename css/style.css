@@ -442,6 +442,15 @@ p {
   }
 }
 
+a {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+a:hover {
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
+}
+
 @media screen and (min-width: 768px) {
   .pc_none {
     display: none;
@@ -784,10 +793,6 @@ footer {
   .c-green-btn p {
     font-size: 3rem;
   }
-}
-.c-green-btn:hover {
-  background-color: #ffffff;
-  color: #215849;
 }
 
 .c-flex-arrow {
@@ -2535,6 +2540,7 @@ body.menu-open #fixed-btn {
   .question__content {
     margin-top: 4.7rem;
     padding-bottom: 7.4rem;
+    max-width: 110rem;
   }
 }
 .question__content p {

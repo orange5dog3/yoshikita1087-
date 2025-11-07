@@ -25,10 +25,7 @@
     }
 
     @include transition;
-    &:hover {
-        background-color: $color-white;
-        color: $color-accent;
-    }
+    
 }
 
 .c-flex-arrow {
