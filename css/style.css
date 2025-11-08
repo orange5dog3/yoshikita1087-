@@ -860,8 +860,14 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 0.5rem;
   width: 100%;
   height: 10.6rem;
+}
+@media screen and (min-width: 768px) {
+  .c-cta__item {
+    gap: 1.5rem;
+  }
 }
 @media screen and (min-width: 768px) {
   .c-cta__item {
@@ -940,8 +946,15 @@ footer {
 .icon-memo {
   display: inline-block;
   color: #ffffff;
-  -webkit-transition: color 0.25s ease;
-  transition: color 0.25s ease;
+  -webkit-transition: color 0.25s ease, -webkit-transform 0.25s ease;
+  transition: color 0.25s ease, -webkit-transform 0.25s ease;
+  transition: color 0.25s ease, transform 0.25s ease;
+  transition: color 0.25s ease, transform 0.25s ease, -webkit-transform 0.25s ease;
+}
+
+.c-cta__item:hover .icon-memo {
+  -webkit-transform: translateX(6px);
+          transform: translateX(6px);
 }
 
 .memo-s-size {
@@ -1039,6 +1052,31 @@ footer {
   .c-fixed__btn p {
     font-size: 1.8rem;
   }
+}
+
+.c-fixed__btn-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+@media screen and (min-width: 768px) {
+  .c-fixed__btn-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+.c-fixed__btn-icon img,
+.c-fixed__btn-icon svg {
+  -webkit-transition: -webkit-transform 0.25s ease;
+  transition: -webkit-transform 0.25s ease;
+  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+}
+
+.c-fixed__btn:hover .c-fixed__btn-icon img,
+.c-fixed__btn:hover .c-fixed__btn-icon svg {
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
 }
 
 /* ハンバーガー開時は fixed-btn を非表示 */
