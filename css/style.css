@@ -407,11 +407,11 @@ h1, h2, h3, h4, label, input, a, ul, li {
 }
 
 .header-padding {
-  padding-top: 8rem;
+  padding-top: 5rem;
 }
 @media screen and (min-width: 768px) {
   .header-padding {
-    padding-top: 15.6rem;
+    padding-top: 8rem;
   }
 }
 
@@ -445,10 +445,6 @@ p {
 a {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
-}
-a:hover {
-  -webkit-filter: brightness(0.7);
-          filter: brightness(0.7);
 }
 
 @media screen and (min-width: 768px) {
@@ -506,14 +502,14 @@ a {
 .header-content {
   padding-top: 1rem;
   padding-left: 1rem;
-  height: 8rem;
+  height: 5rem;
 }
 @media screen and (min-width: 768px) {
   .header-content {
     padding-top: 3.5rem;
     padding-left: 3.9rem;
     padding-right: 3.3rem;
-    height: 15.6rem;
+    height: 8rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -915,12 +911,59 @@ footer {
      object-fit: cover;
 }
 
-.c-cta__reserve {
+.c-green {
   background-color: #215849;
+  color: #ffffff;
+  border: 2px solid #215849;
+}
+.c-green:hover {
+  background-color: #ffffff;
+  color: #215849;
+}
+.c-green:hover .icon-memo {
+  color: #215849; /* hoverで緑（サイトのアクセント色） */
 }
 
-.c-cta__contact {
+.c-gray {
   background-color: #8E948C;
+  color: #ffffff;
+  border: 2px solid #8E948C;
+}
+.c-gray:hover {
+  background-color: #ffffff;
+  color: #8E948C;
+}
+.c-gray:hover .icon-memo {
+  color: #8E948C; /* hoverでグレー（サイトのグレー色） */
+}
+
+.icon-memo {
+  display: inline-block;
+  color: #ffffff;
+  -webkit-transition: color 0.25s ease;
+  transition: color 0.25s ease;
+}
+
+.memo-s-size {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+@media screen and (min-width: 768px) {
+  .memo-s-size {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+.memo-l-size {
+  width: 2rem;
+  height: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .memo-l-size {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
 }
 
 #fixed-btn {
@@ -995,25 +1038,6 @@ footer {
 @media screen and (min-width: 768px) {
   .c-fixed__btn p {
     font-size: 1.8rem;
-  }
-}
-
-.c-fixed__btn-reserve {
-  background-color: #D9D9D9;
-}
-
-.c-fixed__btn-contact {
-  background-color: #8E948C;
-}
-
-.c-fixed__btn-icon {
-  width: 1.6rem;
-  height: 1.6rem;
-}
-@media screen and (min-width: 768px) {
-  .c-fixed__btn-icon {
-    width: 3.5rem;
-    height: 3.5rem;
   }
 }
 

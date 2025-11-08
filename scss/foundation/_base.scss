@@ -27,9 +27,9 @@ h1,h2,h3,h4,label,input,a,ul,li {
 }
 
 .header-padding{
-    padding-top: 8rem;
+    padding-top: 5rem;
     @include pc {
-        padding-top: 15.6rem;
+        padding-top: 8rem;
     }
 }
 
@@ -58,9 +58,6 @@ p {
 
 a{
     @include transition;
-    &:hover {
-        filter: brightness(0.7);
-    }
 }
 
 @include pc{

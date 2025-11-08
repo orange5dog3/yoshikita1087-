@@ -105,12 +105,56 @@
     }
 }
 
-.c-cta__reserve {
+.c-green {
     background-color: $color-accent;
+    color: $color-white;
+    border: 2px solid $color-accent;
+
+    &:hover {
+        background-color: $color-white;
+        color: $color-accent;
+
+        .icon-memo{
+            color: $color-accent;       /* hoverで緑（サイトのアクセント色） */
+        }
+    }
+}   
+
+.c-gray {
+    background-color: $color-gray;
+    color: $color-white;
+    border: 2px solid $color-gray;
+    &:hover {
+        background-color: $color-white;
+        color: $color-gray;
+        .icon-memo{
+            color: $color-gray;       /* hoverでグレー（サイトのグレー色） */
+        }
+    }
 }
 
-.c-cta__contact {
-    background-color: $color-gray;
+.icon-memo {
+    display:inline-block;
+    color: $color-white;                
+    transition: color .25s ease;
+}
+
+.memo-s-size {
+    width: 1.6rem;
+    height: 1.6rem;
+    @include pc {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}
+
+.memo-l-size {
+    width: 2rem;
+    height: 2rem;
+    @include pc {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
 }
 
 // fixed-btn------------------------------------
@@ -162,22 +206,15 @@
     }
 }
 
-.c-fixed__btn-reserve {
-    background-color: $color-gray-light;
-}
 
-.c-fixed__btn-contact {
-    background-color: $color-gray-dark;
-}
-
-.c-fixed__btn-icon {
-    width: 1.6rem;
-    height: 1.6rem;
-    @include pc {
-        width: 3.5rem;
-        height: 3.5rem;
-    }
-}
+// .c-fixed__btn-icon {
+//     width: 1.6rem;
+//     height: 1.6rem;
+//     @include pc {
+//         width: 3.5rem;
+//         height: 3.5rem;
+//     }
+// }
 
 
 /* ハンバーガー開時は fixed-btn を非表示 */
