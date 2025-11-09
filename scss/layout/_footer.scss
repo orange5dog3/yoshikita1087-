@@ -7,6 +7,14 @@ footer {
     }
 }
 
+footer a {
+    transition: transform 0.2s ease;
+}
+
+footer a:hover {
+    transform: translateY(-4px);
+}
+
 .footer__flex {
     
     @include pc {
@@ -111,6 +119,7 @@ footer {
     a {
         display: flex;
         align-items: center;
+        padding: 1rem;
         gap: 1rem;
         @include pc {
             gap: 1.8rem;
@@ -138,6 +147,7 @@ footer {
     display: flex;
     gap: 2.3rem;
     a {
+        padding: 1rem;
         img {
             width: 5rem;
             height: 5rem;
