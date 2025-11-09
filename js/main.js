@@ -63,7 +63,24 @@ $(function () {
 // swiper
 // ==========================================================================
 const swiper = new Swiper('.swiper', {
-  loop: true,             // 連続ループ
-  autoplay: { delay: 5000 }, // 自動再生（任意）
-  pagination: { el: '.swiper-pagination', clickable: true },
+  loop: true, // 連続ループ
+
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false, 
+  },
+
+  // ここからフェード設定
+  effect: 'fade',
+  speed: 3000, 
+
+  fadeEffect: {
+    crossFade: true, 
+  },
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
 });
