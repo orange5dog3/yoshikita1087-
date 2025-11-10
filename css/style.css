@@ -2264,7 +2264,7 @@ body.menu-open #fixed-btn {
 .treatment__stretch-effect {
   padding-top: 4.1rem;
   padding-bottom: 2.4rem;
-  background-image: url("../image/image_treatment_bg_sp.jpg");
+  background-image: url("../image/image_treatment_bg_sp.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2273,7 +2273,7 @@ body.menu-open #fixed-btn {
   .treatment__stretch-effect {
     padding-top: 9rem;
     padding-bottom: 10rem;
-    background-image: url("../image/image_treatment_bg_pc.jpg");
+    background-image: url("../image/image_treatment_bg_pc.webp");
   }
 }
 .treatment__stretch-effect h2 {
