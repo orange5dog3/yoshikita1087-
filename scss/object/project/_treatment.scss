@@ -185,14 +185,14 @@
 .treatment__stretch-effect {
     padding-top: 4.1rem;
     padding-bottom: 2.4rem;
-    background-image: url("../image/image_treatment_bg_sp.jpg");
+    background-image: url("../image/image_treatment_bg_sp.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     @include pc {
         padding-top: 9.0rem;
         padding-bottom: 10rem;
-        background-image: url("../image/image_treatment_bg_pc.jpg");
+        background-image: url("../image/image_treatment_bg_pc.webp");
     }
 
    

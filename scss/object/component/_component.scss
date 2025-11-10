@@ -25,6 +25,13 @@
     }
 
     @include transition;
+
+    &:hover{
+        .c-btn-arrow{
+            transform:translateX(4px); 
+            transition:transform .2s ease;
+        }
+    }
     
 }
 
@@ -36,8 +43,8 @@
     font-weight: 400;
 }
 
-.c-btn-arrow:hover{ filter:brightness(1.05); }
-.c-btn-arrow-arrow{
+
+.c-btn-arrow{
     width:15px; 
     height:15px;
     transition:transform .2s ease;
@@ -45,9 +52,6 @@
         width: 3rem;
         height: 3rem;
     }
-}
-.c-btn-arrow:hover .c-btn-arrow-arrow{
-    transform:translateX(4px); /* 右に4px動かす */
 }
 
 // cta------------------------------------
