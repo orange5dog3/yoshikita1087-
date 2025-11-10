@@ -190,9 +190,9 @@
     display: flex;
     flex-direction: column;
     right: 0;
-    top: 8rem;
+    top: 5rem;
     @include pc {
-        top: 15.6rem;
+        top: 8rem;
     }
 }
 

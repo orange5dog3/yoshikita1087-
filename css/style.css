@@ -523,11 +523,11 @@ a {
   }
 }
 
-.header__logo a {
-  width: 5.5rem;
+.header__logo {
+  width: 5.2rem;
 }
 @media screen and (min-width: 768px) {
-  .header__logo a {
+  .header__logo {
     width: 9.2rem;
   }
 }
@@ -567,9 +567,11 @@ footer a {
   transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 
-footer a:hover {
-  -webkit-transform: translateY(-4px);
-          transform: translateY(-4px);
+@media screen and (min-width: 768px) {
+  footer a:hover {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1023,11 +1025,11 @@ footer a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   right: 0;
-  top: 8rem;
+  top: 5rem;
 }
 @media screen and (min-width: 768px) {
   .fixed-btn {
-    top: 15.6rem;
+    top: 8rem;
   }
 }
 
@@ -1151,7 +1153,7 @@ body.menu-open #fixed-btn {
 
 .hamburger-menu {
   position: fixed;
-  top: 8rem;
+  top: 5rem;
   right: 0;
   width: 30rem;
   background: #215849;

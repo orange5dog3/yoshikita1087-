@@ -24,8 +24,8 @@
     }
 }
 
-.header__logo a {
-    width: 5.5rem;
+.header__logo {
+    width: 5.2rem;
     @include pc {
         width: 9.2rem;
     }
