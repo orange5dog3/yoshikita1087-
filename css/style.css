@@ -807,6 +807,14 @@ footer a:hover {
     font-size: 3rem;
   }
 }
+.c-green-btn:hover .c-btn-arrow {
+  -webkit-transform: translateX(4px);
+          transform: translateX(4px);
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
 
 .c-flex-arrow {
   display: -webkit-inline-box;
@@ -822,12 +830,7 @@ footer a:hover {
   font-weight: 400;
 }
 
-.c-btn-arrow:hover {
-  -webkit-filter: brightness(1.05);
-          filter: brightness(1.05);
-}
-
-.c-btn-arrow-arrow {
+.c-btn-arrow {
   width: 15px;
   height: 15px;
   -webkit-transition: -webkit-transform 0.2s ease;
@@ -836,15 +839,10 @@ footer a:hover {
   transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 @media screen and (min-width: 768px) {
-  .c-btn-arrow-arrow {
+  .c-btn-arrow {
     width: 3rem;
     height: 3rem;
   }
-}
-
-.c-btn-arrow:hover .c-btn-arrow-arrow {
-  -webkit-transform: translateX(4px);
-          transform: translateX(4px); /* 右に4px動かす */
 }
 
 .c-cta {
