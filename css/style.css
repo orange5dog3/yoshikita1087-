@@ -1652,7 +1652,7 @@ body.menu-open #fixed-btn {
 }
 
 .top__price {
-  background: url(../image/image_top_price_bg.jpg) top center/cover no-repeat;
+  background: url(../image/image_top_price_bg.webp) top center/cover no-repeat;
   padding-top: 2rem;
   padding-bottom: 3.4rem;
   text-align: center;
