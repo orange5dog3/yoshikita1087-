@@ -12,7 +12,9 @@ footer a {
 }
 
 footer a:hover {
-    transform: translateY(-4px);
+    @include pc {
+        transform: translateY(-4px);
+    }
 }
 
 .footer__flex {
